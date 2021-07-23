@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+
+  sqs-test-1:
+    image: afzal/sqs-cache-test
+    container_name: sqs-test-1
+    environment:
+      - server:8089
+    ports:
+      - "8089:8089"
+
+  sqs-test-2:
+    image: afzal/sqs-cache-test
+    container_name: sqs-test-2
+    environment:
+      - server:8085
+    ports:
+      - "8085:8085"
